@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+     /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #91c2df;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Blog Page Specific Styles */
+.blog-posts {
+    background-color: #a9cae6;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.blog-posts h1 {
+    color: #333;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Blog Post Container */
+.blog-posts .post {
+    background-color: #b4d9eb;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-posts .post h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.blog-posts .post p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.blog-posts .post img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.blog-posts .post video {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Comment Section */
+.blog-posts .comments {
+    margin-top: 40px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-posts .comments h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.blog-posts .comments ul {
+    list-style: none;
+    padding: 0;
+}
+
+.blog-posts .comments ul li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.blog-posts .comments ul li:last-child {
+    border-bottom: none;
+}
+
+.blog-posts .comments .comment {
+    font-size: 1rem;
+    color: #444;
+}
+
+.blog-posts .comments .comment span {
+    font-weight: bold;
+    color: #2196F3;
+    margin-right: 10px;
+}
+
+/* Comment Form */
+.blog-posts .comment-form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-posts .comment-form input, 
+.blog-posts .comment-form textarea {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.blog-posts .comment-form button {
+    background-color: #2196F3;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.blog-posts .comment-form button:hover {
+    background-color: #1976D2;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blog-posts .post h2 {
+        font-size: 1.8rem;
+    }
+
+    .blog-posts .post p {
+        font-size: 1rem;
+    }
+
+    .blog-posts .comment-form input, 
+    .blog-posts .comment-form textarea {
+        font-size: 1rem;
+    }
+
+    .blog-posts .comment-form button {
+        font-size: 1rem;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="business-tenders.html">Business Tenders</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li> <!-- Link to your Blogger blog -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="articles">
+            <h1>Welcome to My Blog!</h1>
+            <p>Click below to read my latest posts.</p>
+            <a href="https://nhlanhlamakhanya.blogspot.com" target="_blank">Visit My Blog</a> <!-- Blogger link -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 NGT MAKHANYA. All rights reserved.</p>
+    </footer>
+</body>
+</html>

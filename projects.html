@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - My Website</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Projects Page Specific Styles */
+.projects {
+    background-color: #b7c3e9;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.projects h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.projects p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 40px;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Project Dropdown Button */
+.projects .dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+}
+
+.projects .dropdown-btn {
+    background-color: #FF5722; /* Orange color for the button */
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.projects .dropdown-btn:hover {
+    background-color: #e64a19; /* Darker orange when hovered */
+}
+
+.projects .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}
+
+.projects .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.projects .dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.projects .dropdown:hover .dropdown-content {
+    display: block;
+}
+.project-content {
+    display: none;
+    padding: 15px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects .dropdown-btn {
+        width: 100%;
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+
+    .projects p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="business-tenders.html">Business Tenders</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="projects">
+            <h1>Our Projects</h1>
+
+            
+            <div class="dropdown-container">
+                <button class="dropdown-btn" onclick="toggleProject('social-housing')">Social Housing</button>
+                <div id="social-housing" class="project-content">
+                    <p>Social Housing Project aims to provide affordable housing to low-income communities, helping to improve living standards and create vibrant communities. It includes the construction of new homes and the rehabilitation of existing structures.</p>
+                </div>
+
+                <button class="dropdown-btn" onclick="toggleProject('usizo-labantu')">Usizo Labantu</button>
+                <div id="usizo-labantu" class="project-content">
+                    <p>Usizo Labantu is a social initiative focused on uplifting disadvantaged communities through skills development, education, and access to basic services. We aim to empower individuals and help break the cycle of poverty.</p>
+                </div>
+
+                <button class="dropdown-btn" onclick="toggleProject('vodacom')">Vodacom</button>
+                <div id="vodacom" class="project-content">
+                    <p>The Vodacom Project is a technology-driven initiative to improve telecommunications and internet accessibility in remote and underserved regions. The project provides mobile network coverage and internet connectivity to rural areas.</p>
+                </div>
+
+                <button class="dropdown-btn" onclick="toggleProject('fuel-on')">Fuel On</button>
+                <div id="fuel-on" class="project-content">
+                    <p>Fuel On is an energy sustainability project focused on providing affordable and eco-friendly fuel solutions to local communities. The project aims to promote renewable energy sources, reduce carbon footprints, and improve access to energy in rural areas.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 NGT MAKHANYA. All rights reserved.</p>
+    </footer>
+    <script>
+        // Function to toggle the visibility of the project descriptions
+function toggleProject(projectId) {
+    var content = document.getElementById(projectId);
+    // Toggle the display of the content (either show or hide)
+    if (content.style.display === "block") {
+        content.style.display = "none";
+    } else {
+        content.style.display = "block";
+    }
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Tenders - My Website</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      /* General Styles for the Business Tenders Page */
+ /* General Styles */
+ body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #9bcad6;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .business-tenders {
+            background-color: #9da6e6;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .business-tenders h1 {
+            text-align: center;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .business-tenders p {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .dropdown {
+            margin-bottom: 20px;
+        }
+
+        .dropdown-btn {
+            background-color: #f14f0f;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
+            text-align: left;
+            border-radius: 5px;
+        }
+
+        .dropdown-btn:hover {
+            background-color: #555;
+        }
+
+        .dropdown-content {
+            display: none;  /* Hides the dropdown content by default */
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        .dropdown-content a {
+            display: block;
+            color: #333;
+            text-decoration: none;
+            padding: 8px;
+            border-radius: 4px;
+            margin-bottom: 5px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* Optional: Styling for paragraphs under each dropdown */
+        .dropdown-description {
+            display: none; /* Hides the explanation text */
+            margin-top: 15px;
+            color: #666;
+        }
+
+        /* Make it responsive */
+        @media (max-width: 768px) {
+            .dropdown-btn {
+                width: 100%;
+            }
+        }
+/* Optional: Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .business-tenders h1 {
+        font-size: 2rem;
+    }
+
+    .tender-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="business-tenders.html">Business Tenders</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="business-tenders">
+            <h1>Business Tenders</h1>
+            <p>Explore the various business tenders available across different sectors. From cleaning services to supply tenders, find the right opportunities here.</p>
+
+            <!-- Cleaning Service Dropdown -->
+            <div class="dropdown">
+                <button class="dropdown-btn" onclick="toggleDropdown('cleaning-service')">Cleaning Service</button>
+                <div class="dropdown-content" id="cleaning-service">
+                    <p> GNT MAC Cleaning Company is a professional cleaning service provider specializing in offering top-notch cleaning solutions for various residential and commercial needs. Known for its commitment to quality, GNT MAC Cleaning Company typically provides services such as general cleaning, deep cleaning, office cleaning, and specialized services like carpet cleaning, floor waxing, window cleaning, and more.
+
+                        They might also offer customized cleaning schedules to accommodate businesses or residential clients, ensuring that spaces are maintained to the highest standards of cleanliness and hygiene. In addition to standard cleaning, GNT MAC Cleaning could extend its services to high-traffic areas like shopping malls, schools, hospitals, or industrial settings, requiring specialized equipment and trained staff.</p>
+                    
+                </div>
+                <p class="dropdown-description">Explore cleaning service tenders for various business needs, including janitorial services for offices, hospitals, and other commercial spaces.</p>
+            </div>
+
+            <!-- Grass Cutting Dropdown -->
+            <div class="dropdown">
+                <button class="dropdown-btn" onclick="toggleDropdown('grass-cutting')">Grass Cutting</button>
+                <div class="dropdown-content" id="grass-cutting">
+                    <p> A grass cutting tenders provides lawn maintenance services, including mowing, trimming, edging, fertilization, weed control, and seasonal care. They ensure lawns are neat, healthy, and well-maintained for residential and commercial clients, saving time and offering professional expertise for optimal grass growth and appearance.</p> 
+                </div>
+                <p class="dropdown-description">These tenders include lawn maintenance and grass cutting for parks, schools, and other properties requiring regular upkeep.</p>
+            </div>
+
+            <!-- Supply Dropdown -->
+            <div class="dropdown">
+                <button class="dropdown-btn" onclick="toggleDropdown('supply')">Supply</button>
+                <div class="dropdown-content" id="supply">
+                    <p> We supply products like stationery ,fuels,clothing items etc. </p>
+                    
+                </div>
+                <p class="dropdown-description">Supply tenders include the procurement of goods and services, including office supplies, equipment, and other materials for large organizations.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 NGT MAKHANYA. All rights reserved.</p>
+    </footer>
+    <script>
+        function toggleDropdown(id) {
+            var content = document.getElementById(id);
+            var description = content.nextElementSibling; // Paragraph with the explanation
+
+            // Toggle the dropdown content
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                description.style.display = "none"; // Hide the explanation text when the dropdown is hidden
+            } else {
+                content.style.display = "block";
+                description.style.display = "block"; // Show the explanation text when the dropdown is shown
+            }
+        }
+    </script>
+</body>
+</html>
